@@ -1,0 +1,23 @@
+{
+  "name": "vocabin-web",
+  "version": "1.0.0",
+  "description": "Vocabin - Web'de Gezinirken İngilizce Öğrenin",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --open=index.html",
+    "start": "live-server --port=3000 --open=index.html",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "keywords": [
+    "vocabin",
+    "english",
+    "learning",
+    "chrome-extension",
+    "vocabulary"
+  ],
+  "author": "Vocabin Technologies",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
