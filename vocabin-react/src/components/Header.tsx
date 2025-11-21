@@ -50,7 +50,8 @@ export default function Header() {
         <div className="nav-actions">
           <a href="https://chrome.google.com/webstore" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
             <ChromeIcon />
-            Chrome'a Ekle
+            <span className="btn-text">Chrome'a Ekle</span>
+            <span className="btn-text-mobile">Ekle</span>
           </a>
           <button
             className={`mobile-menu-toggle ${isMobileMenuOpen ? 'active' : ''}`}
