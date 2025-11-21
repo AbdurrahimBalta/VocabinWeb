@@ -175,8 +175,8 @@ export const footerLinks = {
   company: [
     { label: "Hakkımızda", href: "#" },
     { label: "İletişim", href: "#" },
-    { label: "Gizlilik Politikası", href: "#" },
-    { label: "Kullanım Koşulları", href: "#" },
+    { label: "Gizlilik Politikası", href: "/privacy-policy" },
+    { label: "Kullanım Koşulları", href: "/terms-of-service" },
     { label: "KVKK", href: "#" }
   ]
 };

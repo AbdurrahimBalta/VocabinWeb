@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { navLinks } from '../data/content';
 import { useHeaderScroll, useActiveSection } from '../hooks/useScrollAnimation';
 import { ChromeIcon } from './Icons';
@@ -7,28 +8,55 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const hasScrolled = useHeaderScroll();
   const activeSection = useActiveSection(['features', 'how-it-works', 'pricing', 'testimonials', 'faq']);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href.startsWith('#') && href !== '#') {
       e.preventDefault();
-      const target = document.querySelector(href);
-      if (target) {
-        const headerOffset = 80;
-        const elementPosition = target.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
+
+      // Eğer ana sayfada değilsek, önce ana sayfaya git
+      if (location.pathname !== '/') {
+        navigate('/');
+        // Ana sayfaya gittikten sonra scroll için kısa bir gecikme
+        setTimeout(() => {
+          const target = document.querySelector(href);
+          if (target) {
+            const headerOffset = 80;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        }, 100);
+      } else {
+        // Ana sayfadaysak normal scroll yap
+        const target = document.querySelector(href);
+        if (target) {
+          const headerOffset = 80;
+          const elementPosition = target.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
       }
       setIsMobileMenuOpen(false);
     }
   };
 
+  const handleLogoClick = () => {
+    navigate('/');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <header className={`header ${hasScrolled ? 'scrolled' : ''}`}>
       <nav className="nav container">
-        <div className="nav-brand">
+        <div className="nav-brand" onClick={handleLogoClick} style={{ cursor: 'pointer' }}>
           <span className="logo">🌱</span>
           <span className="brand-name">Vocabin</span>
         </div>

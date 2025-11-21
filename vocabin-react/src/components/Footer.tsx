@@ -1,11 +1,17 @@
+import { useNavigate } from 'react-router-dom';
 import { footerLinks } from '../data/content';
 import { TwitterIcon, InstagramIcon, GitHubIcon, DiscordIcon } from './Icons';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const navigate = useNavigate();
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (href.startsWith('#') && href !== '#') {
+    if (href.startsWith('/')) {
+      e.preventDefault();
+      navigate(href);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (href.startsWith('#') && href !== '#') {
       e.preventDefault();
       const target = document.querySelector(href);
       if (target) {
