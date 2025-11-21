@@ -1157,6 +1157,31 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .floating-card {
-        display: none;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .floating-card .word {
+        font-size: 11px;
+    }
+
+    .floating-card .translation {
+        font-size: 10px;
+        margin-top: 2px;
+    }
+
+    .card-1 {
+        top: 5%;
+        left: 0%;
+    }
+
+    .card-2 {
+        top: 50%;
+        right: 0%;
+    }
+
+    .card-3 {
+        bottom: 5%;
+        left: 5%;
     }
 }

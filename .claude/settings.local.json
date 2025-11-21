@@ -5,7 +5,12 @@
       "Bash(npm run dev:*)",
       "Bash(npm create:*)",
       "Bash(mkdir:*)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Bash(npm run build:*)",
+      "WebFetch(domain:vocabinapp.com)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nFix responsive header layout for mobile and tablet devices\n\n- Optimize header spacing and button sizes for iPad (1024px breakpoint)\n- Shorten button text to \"Ekle\" on mobile devices (768px breakpoint)\n- Adjust logo and brand sizes across different screen sizes\n- Improve overall header responsiveness to prevent overflow\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []
