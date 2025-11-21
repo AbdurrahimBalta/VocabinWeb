@@ -12,7 +12,10 @@
       "Bash(git commit -m \"$(cat <<''EOF''\nFix responsive header layout for mobile and tablet devices\n\n- Optimize header spacing and button sizes for iPad (1024px breakpoint)\n- Shorten button text to \"Ekle\" on mobile devices (768px breakpoint)\n- Adjust logo and brand sizes across different screen sizes\n- Improve overall header responsiveness to prevent overflow\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
       "Bash(git push:*)",
       "Bash(npm install:*)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd Google Search Console verification file\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "WebSearch",
+      "WebFetch(domain:support.google.com)"
     ],
     "deny": [],
     "ask": []
