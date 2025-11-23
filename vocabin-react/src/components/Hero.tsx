@@ -75,10 +75,9 @@ export default function Hero() {
             <div className="hero-badge">
               <span className="badge">🚀 10,000+ aktif kullanıcı</span>
             </div>
-            <h1 className="hero-title">Web'de Gezinirken İngilizce Öğrenin</h1>
+            <h1 className="hero-title">Web'de gör, Mobille hatırla, Vocabinle öğren</h1>
             <p className="hero-description">
-              İngilizce kelimeleri anında çevirin, kaydedin ve kelime dağarcığınızı geliştirin.
-              Vocabin ile her web sayfası bir öğrenme fırsatına dönüşür.
+              Tekrar tekrar çeviriye son. Vocabinle öğrenmek istediğiniz dildeki kelimeleri kalıcı hafızanıza geçirin. Kelimeleri kaydedin vocabin sizin için hatırlatsın. Kalıcı öğrenmeyle ilerlemeyi yakalayın.
             </p>
             <div className="hero-cta">
               <a href="https://chrome.google.com/webstore" target="_blank" rel="noopener noreferrer" className="btn btn-large btn-primary">

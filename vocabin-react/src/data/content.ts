@@ -2,27 +2,27 @@ export const features = [
   {
     icon: "🔍",
     title: "Anında Çeviri",
-    description: "Herhangi bir web sayfasında İngilizce kelime veya cümle seçin, anında Türkçe çevirisini görün. Google Translate API gücüyle doğru ve hızlı çeviriler."
+    description: "Herhangi bir web sayfasında kelime veya cümle seçin, anında çeviriyi kaydedin."
   },
   {
     icon: "💾",
-    title: "Kişisel Kelime Listesi",
-    description: "Beğendiğiniz kelimeleri tek tıkla kaydedin. Tüm kelimeleriniz bulutta güvenle saklanır ve tüm cihazlarınızda senkronize edilir."
+    title: "Vocabin Akıllı defter",
+    description: "Vocabin akıllı defterle. Her translate bir not, her not kalıcı bir öğrenme. Yeni gördüğünüz çevirileri tek tıkla keydedin. IOS & Android cihazınızdan senkronize bir şekilde istediğiniz zaman erişim sağlayın."
   },
   {
     icon: "📊",
     title: "İlerleme Takibi",
-    description: "Kelimelerinizi \"Öğreniliyor\" ve \"Öğrenildi\" olarak işaretleyin. Toplam kelime sayınızı, ilerlemenizi ve istatistiklerinizi görsel olarak takip edin."
+    description: "Kelimeleri öğrenme sürecinizi görünür hale getirir. İlerlemenizi istatistiksel olarak görüntüler. Yabancı dilleri kalıcı bir şekilde öğrenme yolculuğuna çıkartır."
   },
   {
     icon: "🎯",
-    title: "Akıllı Duplicate Kontrolü",
-    description: "Aynı kelimeyi tekrar kaydetmeye çalıştığınızda \"Dejavu mu oldun?\" uyarısı ile gereksiz tekrarları önleyin."
+    title: "Makale Oluşturucu",
+    description: "Makale oluşturucuyla, Öğrendiğiniz kelime gruplarıyla, seviyenize göre anlamlı metinler oluşturur ve bu metinlerden oluşturduğu quizlerle pekiştirmenizi sağlar."
   },
   {
     icon: "🔐",
-    title: "Güvenli ve Gizli",
-    description: "Verileriniz şifrelenmiş bağlantılarla korunur. GDPR/KVKK uyumlu. Kelime verileriniz sadece size aittir."
+    title: "Platform Bağımsız",
+    description: "Vocabine , IOS Android markletlerden ve  webden erişebilir. Kalıcı öğrenme sürecinizi takip edebilirsiniz."
   },
   {
     icon: "⚡",
@@ -71,11 +71,9 @@ export const pricingPlans = [
     buttonVariant: "outline" as const
   },
   {
-    name: "Pro",
-    price: "₺29.90",
+    name: "Aylık",
+    price: "₺150",
     period: "/ay",
-    badge: "En Popüler",
-    featured: true,
     features: [
       { text: "Sınırsız kelime kaydı", included: true },
       { text: "API anahtarı dahil", included: true },
@@ -84,25 +82,26 @@ export const pricingPlans = [
       { text: "Excel/CSV dışa aktarma", included: true },
       { text: "Flashcard modu (yakında)", included: true }
     ],
-    buttonText: "Pro'ya Geç",
-    buttonVariant: "primary" as const
+    buttonText: "Aylık Plan",
+    buttonVariant: "outline" as const
   },
   {
-    name: "Premium",
-    price: "₺99.90",
+    name: "Yıllık",
+    price: "₺1000",
     period: "/yıl",
-    badge: "%65 İndirim",
+    badge: "%44 İndirim",
+    secondaryBadge: "En Popüler",
+    featured: true,
     badgeType: "discount" as const,
     features: [
-      { text: "Pro'nun tüm özellikleri", included: true },
+      { text: "Aylık planın tüm özellikleri", included: true },
       { text: "Yıllık faturalama", included: true },
-      { text: "2 ay ücretsiz", included: true },
       { text: "VIP destek", included: true },
       { text: "Beta özelliklerine erişim", included: true },
       { text: "Özel eğitim materyalleri", included: true }
     ],
-    buttonText: "Premium'a Geç",
-    buttonVariant: "outline" as const
+    buttonText: "Yıllık Plan",
+    buttonVariant: "primary" as const
   }
 ];
 
@@ -133,11 +132,11 @@ export const testimonials = [
 export const faqItems = [
   {
     question: "Vocabin nedir ve nasıl çalışır?",
-    answer: "Vocabin, web'de gezinirken İngilizce kelimeleri anında Türkçe'ye çeviren ve kişisel kelime listenize kaydeden bir Chrome Extension'dır. Herhangi bir web sayfasında kelime seçtiğinizde otomatik olarak çeviri yapılır ve kaydedebilirsiniz."
+    answer: "Vocabin, web'de gezinirken İngilizce kelimeleri anında Türkçe'ye çeviren ve kişisel kelime listenize kaydeden bir Chrome Extension'dır. Herhangi bir web sayfasında kelime seçtiğinizde otomatik olarak çeviri yapılır ve kaydedebilirsiniz. Öğrenmek istediğiniz kelimeleri vocabin mobil uygulamalarıyla kalıcı hafızanıza taşıyabilirsiniz."
   },
   {
     question: "Ücretsiz plan yeterli mi?",
-    answer: "Ücretsiz plan ile 100 kelimeye kadar kayıt yapabilir ve temel özellikleri kullanabilirsiniz. Kendi Google Translate API anahtarınızı eklemeniz gerekir. Daha fazla kelime ve özellik için Pro veya Premium planlarımızı inceleyebilirsiniz."
+    answer: "Ücretsiz plan  100 kadar kelimeyle Vocabinin tüm özelliklerini erişebileceğiniz ve test edebileceğiniz bir deneme sürümüdür. Uzun vadeli fayda için pro plan önerilir."
   },
   {
     question: "Verilerim güvende mi?",
@@ -150,10 +149,6 @@ export const faqItems = [
   {
     question: "İnternet bağlantısı olmadan kullanabilir miyim?",
     answer: "Çevrimdışıyken kaydettiğiniz kelimeleri görüntüleyebilirsiniz. Ancak yeni kelime çevirisi için internet bağlantısı gereklidir. Online olduğunuzda verileriniz otomatik olarak senkronize edilir."
-  },
-  {
-    question: "Sadece İngilizce-Türkçe mi destekleniyor?",
-    answer: "Şu anda evet, sadece İngilizce-Türkçe çeviri desteklenmektedir. 2025'in son çeyreğinde Almanca, Fransızca ve İspanyolca dilleri de eklenecektir. Ayrıca Türkçe-İngilizce çift yönlü çeviri de gelecek."
   }
 ];
 

@@ -22,9 +22,9 @@ export default function Features() {
     <section id="features" className="features">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Güçlü Özellikler</h2>
+          <h2 className="section-title">Özellikler</h2>
           <p className="section-description">
-            Vocabin ile İngilizce öğrenmeyi günlük rutininizin bir parçası haline getirin
+            Vocabinle yabancı dil öğrenmeyi günlük rutininizin bir parçası haline getirin.
           </p>
         </div>
         <div className="features-grid">

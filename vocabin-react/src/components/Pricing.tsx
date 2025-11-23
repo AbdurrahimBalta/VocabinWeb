@@ -6,6 +6,7 @@ interface PricingPlan {
   price: string;
   period: string;
   badge?: string;
+  secondaryBadge?: string;
   badgeType?: 'discount';
   featured?: boolean;
   features: { text: string; included: boolean }[];
@@ -18,9 +19,18 @@ function PricingCard({ plan }: { plan: PricingPlan }) {
 
   return (
     <div ref={ref} className={`pricing-card ${plan.featured ? 'featured' : ''} ${isVisible ? 'visible' : ''}`}>
-      {plan.badge && (
-        <div className={`pricing-badge ${plan.badgeType === 'discount' ? 'discount' : ''}`}>
-          {plan.badge}
+      {(plan.badge || plan.secondaryBadge) && (
+        <div className="pricing-badges">
+          {plan.badge && (
+            <div className={`pricing-badge ${plan.badgeType === 'discount' ? 'discount' : ''}`}>
+              {plan.badge}
+            </div>
+          )}
+          {plan.secondaryBadge && (
+            <div className="pricing-badge popular">
+              {plan.secondaryBadge}
+            </div>
+          )}
         </div>
       )}
       <div className="pricing-header">
