@@ -1,3 +1,33 @@
+// ==================== URL Parameter Scroll Handler ====================
+// Extension'dan ?scrollTo=pricing gibi parametrelerle gelenleri yakala
+(function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const scrollTarget = urlParams.get('scrollTo');
+
+    if (scrollTarget) {
+        // Sayfa tam yüklendikten sonra scroll yap
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const targetElement = document.getElementById(scrollTarget);
+                if (targetElement) {
+                    const headerOffset = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    // URL'den parametreyi temizle (opsiyonel, daha temiz görünüm için)
+                    const cleanUrl = window.location.pathname + window.location.hash;
+                    window.history.replaceState({}, document.title, cleanUrl);
+                }
+            }, 800);
+        });
+    }
+})();
+
 // ==================== Mobile Menu Toggle ====================
 const mobileMenuToggle = document.getElementById('mobileMenuToggle');
 const navMenu = document.getElementById('navMenu');
