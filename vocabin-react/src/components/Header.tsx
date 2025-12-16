@@ -76,7 +76,7 @@ export default function Header() {
         </ul>
 
         <div className="nav-actions">
-          <a href="https://chrome.google.com/webstore" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+          <a href="https://chromewebstore.google.com/detail/vocabin-%C3%A7eviri-belle%C4%9Fi/jfkpilejngclplpgcdicdmpbabmagjlf?hl=tr" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
             <ChromeIcon />
             <span className="btn-text">Chrome'a Ekle</span>
             <span className="btn-text-mobile">Ekle</span>

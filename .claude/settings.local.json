@@ -17,7 +17,8 @@
       "WebSearch",
       "WebFetch(domain:support.google.com)",
       "Bash(git restore:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(npx wrangler:*)"
     ],
     "deny": [],
     "ask": []
