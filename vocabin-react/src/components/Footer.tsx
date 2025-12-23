@@ -1,10 +1,35 @@
 import { useNavigate } from 'react-router-dom';
-import { footerLinks } from '../data/content';
 import { TwitterIcon, InstagramIcon, GitHubIcon, DiscordIcon } from './Icons';
+import { useLanguage } from '../i18n/LanguageContext';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const navigate = useNavigate();
+  const { t } = useLanguage();
+
+  const footerLinks = {
+    product: [
+      { label: t('footer.features'), href: '#features' },
+      { label: t('footer.howItWorks'), href: '#how-it-works' },
+      { label: t('footer.pricing'), href: '#pricing' },
+      { label: t('footer.roadmap'), href: '#' },
+      { label: t('footer.changelog'), href: '#' }
+    ],
+    resources: [
+      { label: t('footer.documentation'), href: '#' },
+      { label: t('footer.api'), href: '#' },
+      { label: t('footer.support'), href: '#' },
+      { label: t('footer.blog'), href: '#' },
+      { label: t('footer.community'), href: '#' }
+    ],
+    company: [
+      { label: t('footer.about'), href: '#' },
+      { label: t('footer.contact'), href: '#' },
+      { label: t('footer.privacy'), href: '/privacy-policy' },
+      { label: t('footer.terms'), href: '/terms-of-service' },
+      { label: t('footer.kvkk'), href: '#' }
+    ]
+  };
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href.startsWith('/')) {
@@ -35,10 +60,7 @@ export default function Footer() {
               <span className="logo">🌱</span>
               <span className="brand-name">Vocabin</span>
             </div>
-            <p className="footer-description">
-              Web'de gezinmeyi bir öğrenme deneyimine dönüştürerek,
-              milyonlarca insanın kelime dağarcığını geliştirmesine yardımcı oluyoruz.
-            </p>
+            <p className="footer-description">{t('footer.description')}</p>
             <div className="footer-social">
               <a href="#" className="social-link" aria-label="Twitter">
                 <TwitterIcon />
@@ -55,7 +77,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="footer-section">
-            <h4 className="footer-title">Ürün</h4>
+            <h4 className="footer-title">{t('footer.product')}</h4>
             <ul className="footer-links">
               {footerLinks.product.map((link) => (
                 <li key={link.label}>
@@ -67,7 +89,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="footer-section">
-            <h4 className="footer-title">Kaynaklar</h4>
+            <h4 className="footer-title">{t('footer.resources')}</h4>
             <ul className="footer-links">
               {footerLinks.resources.map((link) => (
                 <li key={link.label}>
@@ -79,7 +101,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="footer-section">
-            <h4 className="footer-title">Şirket</h4>
+            <h4 className="footer-title">{t('footer.company')}</h4>
             <ul className="footer-links">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
@@ -92,7 +114,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; {currentYear} Vocabin Technologies. Tüm hakları saklıdır.</p>
+          <p>&copy; {currentYear} {t('footer.copyright')}</p>
         </div>
       </div>
     </footer>

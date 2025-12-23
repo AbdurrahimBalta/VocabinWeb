@@ -1,10 +1,12 @@
 import { useEffect, useRef } from 'react';
 import { ChromeIcon, PlayIcon } from './Icons';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { useLanguage } from '../i18n/LanguageContext';
 
 export default function Hero() {
   const { ref: mockupRef, isVisible: mockupVisible } = useScrollAnimation<HTMLDivElement>({ threshold: 0.3 });
   const statsRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguage();
 
   useEffect(() => {
     if (!statsRef.current) return;
@@ -73,36 +75,34 @@ export default function Hero() {
         <div className="hero-content">
           <div className="hero-text">
             <div className="hero-badge">
-              <span className="badge">🚀 10,000+ aktif kullanıcı</span>
+              <span className="badge">{t('hero.badge')}</span>
             </div>
-            <h1 className="hero-title">Web'de gör, Mobille hatırla, Vocabinle öğren</h1>
-            <p className="hero-description">
-              Tekrar tekrar çeviriye son. Vocabinle öğrenmek istediğiniz dildeki kelimeleri kalıcı hafızanıza geçirin. Kelimeleri kaydedin vocabin sizin için hatırlatsın. Kalıcı öğrenmeyle ilerlemeyi yakalayın.
-            </p>
+            <h1 className="hero-title">{t('hero.title')}</h1>
+            <p className="hero-description">{t('hero.description')}</p>
             <div className="hero-cta">
               <a href="https://chrome.google.com/webstore" target="_blank" rel="noopener noreferrer" className="btn btn-large btn-primary">
                 <ChromeIcon size={24} />
-                Ücretsiz Başla
+                {t('hero.startFree')}
               </a>
               <a href="#demo" className="btn btn-large btn-outline" onClick={(e) => handleNavClick(e, '#demo')}>
                 <PlayIcon />
-                Demo'yu İzle
+                {t('hero.watchDemo')}
               </a>
             </div>
             <div className="hero-stats" ref={statsRef}>
               <div className="stat-item">
-                <div className="stat-number">4.8⭐</div>
-                <div className="stat-label">Kullanıcı Puanı</div>
+                <div className="stat-number">4.8</div>
+                <div className="stat-label">{t('hero.statRating')}</div>
               </div>
               <div className="stat-divider"></div>
               <div className="stat-item">
                 <div className="stat-number">500K+</div>
-                <div className="stat-label">Kaydedilen Kelime</div>
+                <div className="stat-label">{t('hero.statWords')}</div>
               </div>
               <div className="stat-divider"></div>
               <div className="stat-item">
                 <div className="stat-number">50+</div>
-                <div className="stat-label">Ülkeden Kullanıcı</div>
+                <div className="stat-label">{t('hero.statCountries')}</div>
               </div>
             </div>
           </div>
@@ -110,15 +110,15 @@ export default function Hero() {
             <div className="hero-visual">
               <div className="floating-card card-1">
                 <div className="word">ephemeral</div>
-                <div className="translation">geçici, kısa ömürlü</div>
+                <div className="translation">{t('hero.translation1')}</div>
               </div>
               <div className="floating-card card-2">
                 <div className="word">serendipity</div>
-                <div className="translation">talihli rastlantı</div>
+                <div className="translation">{t('hero.translation2')}</div>
               </div>
               <div className="floating-card card-3">
                 <div className="word">ambiguous</div>
-                <div className="translation">belirsiz, muğlak</div>
+                <div className="translation">{t('hero.translation3')}</div>
               </div>
               <div
                 ref={mockupRef}
@@ -135,8 +135,8 @@ export default function Hero() {
                   </div>
                   <div className="tooltip-demo">
                     <div className="tooltip-header">ephemeral</div>
-                    <div className="tooltip-translation">geçici, kısa ömürlü</div>
-                    <button className="tooltip-save">Kaydet</button>
+                    <div className="tooltip-translation">{t('hero.translation1')}</div>
+                    <button className="tooltip-save">{t('hero.save')}</button>
                   </div>
                 </div>
               </div>

@@ -1,5 +1,5 @@
-import { pricingPlans } from '../data/content';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { useLanguage } from '../i18n/LanguageContext';
 
 interface PricingPlan {
   name: string;
@@ -60,12 +60,65 @@ function PricingCard({ plan }: { plan: PricingPlan }) {
 }
 
 export default function Pricing() {
+  const { t, language } = useLanguage();
+
+  const pricingPlans: PricingPlan[] = [
+    {
+      name: t('pricing.free'),
+      price: language === 'en' ? '$0' : '₺0',
+      period: t('pricing.perMonth'),
+      features: [
+        { text: t('pricing.free.1'), included: true },
+        { text: t('pricing.free.2'), included: true },
+        { text: t('pricing.free.3'), included: true },
+        { text: t('pricing.free.4'), included: true },
+        { text: t('pricing.free.5'), included: true },
+        { text: t('pricing.free.6'), included: false }
+      ],
+      buttonText: t('pricing.startFree'),
+      buttonVariant: 'outline'
+    },
+    {
+      name: t('pricing.monthly'),
+      price: language === 'en' ? '$9.99' : '₺150',
+      period: t('pricing.perMonth'),
+      features: [
+        { text: t('pricing.monthly.1'), included: true },
+        { text: t('pricing.monthly.2'), included: true },
+        { text: t('pricing.monthly.3'), included: true },
+        { text: t('pricing.monthly.4'), included: true },
+        { text: t('pricing.monthly.5'), included: true },
+        { text: t('pricing.monthly.6'), included: true }
+      ],
+      buttonText: t('pricing.monthlyPlan'),
+      buttonVariant: 'outline'
+    },
+    {
+      name: t('pricing.yearly'),
+      price: language === 'en' ? '$59.99' : '₺1000',
+      period: t('pricing.perYear'),
+      badge: t('pricing.discount'),
+      secondaryBadge: t('pricing.popular'),
+      featured: true,
+      badgeType: 'discount',
+      features: [
+        { text: t('pricing.yearly.1'), included: true },
+        { text: t('pricing.yearly.2'), included: true },
+        { text: t('pricing.yearly.3'), included: true },
+        { text: t('pricing.yearly.4'), included: true },
+        { text: t('pricing.yearly.5'), included: true }
+      ],
+      buttonText: t('pricing.yearlyPlan'),
+      buttonVariant: 'primary'
+    }
+  ];
+
   return (
     <section id="pricing" className="pricing">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Herkes İçin Uygun Fiyatlar</h2>
-          <p className="section-description">İhtiyaçlarınıza uygun planı seçin</p>
+          <h2 className="section-title">{t('pricing.title')}</h2>
+          <p className="section-description">{t('pricing.description')}</p>
         </div>
         <div className="pricing-grid">
           {pricingPlans.map((plan) => (

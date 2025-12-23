@@ -18,7 +18,8 @@
       "WebFetch(domain:support.google.com)",
       "Bash(git restore:*)",
       "Bash(git commit:*)",
-      "Bash(npx wrangler:*)"
+      "Bash(npx wrangler:*)",
+      "Bash(timeout:*)"
     ],
     "deny": [],
     "ask": []

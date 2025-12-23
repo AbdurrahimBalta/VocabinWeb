@@ -1,15 +1,15 @@
 import { ChromeIcon } from './Icons';
+import { useLanguage } from '../i18n/LanguageContext';
 
 export default function CTA() {
+  const { t } = useLanguage();
+
   return (
     <section className="cta">
       <div className="container">
         <div className="cta-content">
-          <h2 className="cta-title">Bugün 50 Yeni Kelime Öğrenin!</h2>
-          <p className="cta-description">
-            10,000+ kullanıcının tercihi. 4.8⭐ ortalama değerlendirme.
-            Hemen başlayın ve kelime dağarcığınızı geliştirin.
-          </p>
+          <h2 className="cta-title">{t('cta.title')}</h2>
+          <p className="cta-description">{t('cta.description')}</p>
           <a
             href="https://chrome.google.com/webstore"
             target="_blank"
@@ -17,7 +17,7 @@ export default function CTA() {
             className="btn btn-large btn-white"
           >
             <ChromeIcon size={24} />
-            Ücretsiz Chrome'a Ekle
+            {t('cta.button')}
           </a>
         </div>
       </div>

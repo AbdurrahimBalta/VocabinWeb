@@ -1,5 +1,5 @@
-import { testimonials } from '../data/content';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { useLanguage } from '../i18n/LanguageContext';
 
 interface Testimonial {
   rating: number;
@@ -30,12 +30,38 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
 }
 
 export default function Testimonials() {
+  const { t } = useLanguage();
+
+  const testimonials: Testimonial[] = [
+    {
+      rating: 5,
+      text: t('testimonials.1.text'),
+      avatar: 'AK',
+      name: t('testimonials.1.name'),
+      role: t('testimonials.1.role')
+    },
+    {
+      rating: 5,
+      text: t('testimonials.2.text'),
+      avatar: 'EY',
+      name: t('testimonials.2.name'),
+      role: t('testimonials.2.role')
+    },
+    {
+      rating: 5,
+      text: t('testimonials.3.text'),
+      avatar: 'MS',
+      name: t('testimonials.3.name'),
+      role: t('testimonials.3.role')
+    }
+  ];
+
   return (
     <section id="testimonials" className="testimonials">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Kullanıcılarımız Ne Diyor?</h2>
-          <p className="section-description">Binlerce mutlu kullanıcıdan bazıları</p>
+          <h2 className="section-title">{t('testimonials.title')}</h2>
+          <p className="section-description">{t('testimonials.description')}</p>
         </div>
         <div className="testimonials-grid">
           {testimonials.map((testimonial) => (

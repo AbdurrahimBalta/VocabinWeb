@@ -141,7 +141,48 @@ h1, h2, h3, h4, h5, h6 {
 .nav-actions {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
+}
+
+/* Language Switcher */
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+}
+
+.lang-flag-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 28px;
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    opacity: 0.5;
+    padding: 4px;
+}
+
+.lang-flag-btn svg {
+    border-radius: 2px;
+}
+
+.lang-flag-btn:hover {
+    opacity: 0.8;
+    background: rgba(74, 222, 128, 0.1);
+}
+
+.lang-flag-btn.active {
+    opacity: 1;
+    background: white;
+    box-shadow: var(--shadow-sm);
 }
 
 .mobile-menu-toggle {

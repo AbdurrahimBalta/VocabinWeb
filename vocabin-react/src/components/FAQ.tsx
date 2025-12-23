@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { faqItems } from '../data/content';
+import { useLanguage } from '../i18n/LanguageContext';
 
 interface FAQItem {
   question: string;
@@ -22,6 +22,15 @@ function FAQItemComponent({ item, isActive, onClick }: { item: FAQItem; isActive
 
 export default function FAQ() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const { t } = useLanguage();
+
+  const faqItems: FAQItem[] = [
+    { question: t('faq.1.question'), answer: t('faq.1.answer') },
+    { question: t('faq.2.question'), answer: t('faq.2.answer') },
+    { question: t('faq.3.question'), answer: t('faq.3.answer') },
+    { question: t('faq.4.question'), answer: t('faq.4.answer') },
+    { question: t('faq.5.question'), answer: t('faq.5.answer') }
+  ];
 
   const handleClick = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -31,8 +40,8 @@ export default function FAQ() {
     <section id="faq" className="faq">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Sık Sorulan Sorular</h2>
-          <p className="section-description">Merak ettiğiniz her şey</p>
+          <h2 className="section-title">{t('faq.title')}</h2>
+          <p className="section-description">{t('faq.description')}</p>
         </div>
         <div className="faq-grid">
           {faqItems.map((item, index) => (
