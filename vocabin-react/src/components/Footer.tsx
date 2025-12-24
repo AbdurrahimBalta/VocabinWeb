@@ -25,8 +25,8 @@ export default function Footer() {
     company: [
       { label: t('footer.about'), href: '#' },
       { label: t('footer.contact'), href: '#' },
-      { label: t('footer.privacy'), href: '/privacy-policy' },
-      { label: t('footer.terms'), href: '/terms-of-service' },
+      { label: t('footer.privacy'), href: '/privacy' },
+      { label: t('footer.terms'), href: '/terms' },
       { label: t('footer.kvkk'), href: '#' }
     ]
   };

@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 export default function TermsOfService() {
+  const { t } = useLanguage();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -9,241 +12,180 @@ export default function TermsOfService() {
     <div className="legal-page">
       <div className="container">
         <div className="legal-content">
-          <h1>Hizmet Şartları ve Kullanım Koşulları</h1>
-          <p className="last-updated">Son Güncelleme: 21 Kasım 2025</p>
+          <h1>{t('terms.title')}</h1>
+          <p className="last-updated">{t('terms.lastUpdated')}</p>
 
           <section>
-            <h2>1. Hizmet Şartlarının Kabulü</h2>
-            <p>
-              Vocabin Chrome Extension ve ilgili web hizmetlerini ("Hizmet") kullanarak, bu Hizmet
-              Şartlarını ("Şartlar") kabul etmiş olursunuz. Bu Şartları kabul etmiyorsanız, lütfen
-              Hizmeti kullanmayın. Hizmeti kullanmaya devam ederek, bu Şartlara bağlı kalmayı kabul
-              edersiniz.
-            </p>
+            <h2>{t('terms.1.title')}</h2>
+            <p>{t('terms.1.text')}</p>
           </section>
 
           <section>
-            <h2>2. Hizmet Tanımı</h2>
-            <p>
-              Vocabin, kullanıcıların web'de gezinirken İngilizce kelimeleri Türkçe'ye çevirmesini,
-              kaydetmesini ve kelime dağarcıklarını geliştirmesini sağlayan bir Chrome Extension
-              ve web platformudur. Hizmet şunları içerir:
-            </p>
+            <h2>{t('terms.2.title')}</h2>
+            <p>{t('terms.2.text')}</p>
             <ul>
-              <li>Anında kelime ve cümle çevirisi</li>
-              <li>Kişisel kelime listesi oluşturma ve yönetimi</li>
-              <li>İlerleme takibi ve istatistikler</li>
-              <li>Bulut senkronizasyonu</li>
-              <li>Premium abonelik özellikleri</li>
+              <li>{t('terms.2.list.1')}</li>
+              <li>{t('terms.2.list.2')}</li>
+              <li>{t('terms.2.list.3')}</li>
+              <li>{t('terms.2.list.4')}</li>
+              <li>{t('terms.2.list.5')}</li>
             </ul>
           </section>
 
           <section>
-            <h2>3. Kullanıcı Hesapları</h2>
-            <h3>3.1. Hesap Oluşturma</h3>
-            <p>
-              Hizmeti kullanabilmek için bir hesap oluşturmanız gerekir. Hesap oluştururken:
-            </p>
+            <h2>{t('terms.3.title')}</h2>
+            <h3>{t('terms.3.1.title')}</h3>
+            <p>{t('terms.3.1.text')}</p>
             <ul>
-              <li>13 yaşından büyük olmalısınız</li>
-              <li>Doğru ve güncel bilgiler sağlamalısınız</li>
-              <li>Hesap güvenliğinizden siz sorumlusunuz</li>
-              <li>Hesabınızı başkalarıyla paylaşmamalısınız</li>
+              <li>{t('terms.3.1.list.1')}</li>
+              <li>{t('terms.3.1.list.2')}</li>
+              <li>{t('terms.3.1.list.3')}</li>
+              <li>{t('terms.3.1.list.4')}</li>
             </ul>
 
-            <h3>3.2. Hesap Güvenliği</h3>
-            <p>
-              Şifrenizin gizliliğini korumaktan siz sorumlusunuz. Hesabınızda yetkisiz bir kullanım
-              fark ederseniz, derhal bizimle iletişime geçin.
-            </p>
+            <h3>{t('terms.3.2.title')}</h3>
+            <p>{t('terms.3.2.text')}</p>
           </section>
 
           <section>
-            <h2>4. Kullanım Kuralları</h2>
-            <p>Hizmeti kullanırken aşağıdaki kurallara uymalısınız:</p>
+            <h2>{t('terms.4.title')}</h2>
+            <p>{t('terms.4.text')}</p>
             <ul>
-              <li>Hizmeti yalnızca yasal amaçlarla kullanın</li>
-              <li>Başkalarının haklarını ihlal etmeyin</li>
-              <li>Spam veya kötü niyetli içerik oluşturmayın</li>
-              <li>Sistemleri hack'lemeye veya kötüye kullanmaya çalışmayın</li>
-              <li>Botlar veya otomatik sistemler kullanmayın</li>
-              <li>Hizmeti tersine mühendislik yapmayın</li>
-              <li>Diğer kullanıcıların deneyimini olumsuz etkilemeyin</li>
+              <li>{t('terms.4.list.1')}</li>
+              <li>{t('terms.4.list.2')}</li>
+              <li>{t('terms.4.list.3')}</li>
+              <li>{t('terms.4.list.4')}</li>
+              <li>{t('terms.4.list.5')}</li>
+              <li>{t('terms.4.list.6')}</li>
+              <li>{t('terms.4.list.7')}</li>
             </ul>
           </section>
 
           <section>
-            <h2>5. Fikri Mülkiyet Hakları</h2>
-            <h3>5.1. Vocabin'in Hakları</h3>
-            <p>
-              Hizmet, içeriği, özellikleri, işlevselliği ve tüm ilgili fikri mülkiyet hakları
-              Vocabin Technologies'e aittir. Bunlar telif hakkı, ticari marka ve diğer fikri
-              mülkiyet yasaları ile korunmaktadır.
-            </p>
+            <h2>{t('terms.5.title')}</h2>
+            <h3>{t('terms.5.1.title')}</h3>
+            <p>{t('terms.5.1.text')}</p>
 
-            <h3>5.2. Kullanıcı Verilerinin Sahipliği</h3>
-            <p>
-              Kaydettiğiniz kelimeler ve kişisel verileriniz size aittir. Vocabin, bu verileri
-              yalnızca Hizmeti sağlamak için kullanır.
-            </p>
+            <h3>{t('terms.5.2.title')}</h3>
+            <p>{t('terms.5.2.text')}</p>
 
-            <h3>5.3. Lisans</h3>
-            <p>
-              Size, bu Şartlara uygun olarak Hizmeti kullanmak için sınırlı, kişisel, devredilemez,
-              münhasır olmayan bir lisans veriyoruz.
-            </p>
+            <h3>{t('terms.5.3.title')}</h3>
+            <p>{t('terms.5.3.text')}</p>
           </section>
 
           <section>
-            <h2>6. Ücretlendirme ve Abonelik</h2>
-            <h3>6.1. Ücretsiz ve Ücretli Planlar</h3>
-            <p>
-              Vocabin hem ücretsiz hem de ücretli abonelik planları sunar. Ücretli planlara abone
-              olarak ilgili planın özelliklerine erişim sağlarsınız.
-            </p>
+            <h2>{t('terms.6.title')}</h2>
+            <h3>{t('terms.6.1.title')}</h3>
+            <p>{t('terms.6.1.text')}</p>
 
-            <h3>6.2. Ödeme Koşulları</h3>
+            <h3>{t('terms.6.2.title')}</h3>
             <ul>
-              <li>Ücretler seçtiğiniz plana göre belirlenir</li>
-              <li>Ödemeler aylık veya yıllık olarak otomatik yenilenir</li>
-              <li>Kredi kartı bilgileriniz güvenli ödeme sağlayıcıları tarafından işlenir</li>
-              <li>Fiyatlar önceden bildirilmek suretiyle değiştirilebilir</li>
+              <li>{t('terms.6.2.list.1')}</li>
+              <li>{t('terms.6.2.list.2')}</li>
+              <li>{t('terms.6.2.list.3')}</li>
+              <li>{t('terms.6.2.list.4')}</li>
             </ul>
 
-            <h3>6.3. İptal ve İade Politikası</h3>
+            <h3>{t('terms.6.3.title')}</h3>
             <ul>
-              <li>Aboneliğinizi istediğiniz zaman iptal edebilirsiniz</li>
-              <li>İptal sonrası mevcut abonelik dönemi sonuna kadar erişim devam eder</li>
-              <li>Kullanılmayan süre için geri ödeme yapılmaz</li>
-              <li>14 günlük yasal cayma hakkınız saklıdır (dijital hizmet kullanılmadıysa)</li>
+              <li>{t('terms.6.3.list.1')}</li>
+              <li>{t('terms.6.3.list.2')}</li>
+              <li>{t('terms.6.3.list.3')}</li>
+              <li>{t('terms.6.3.list.4')}</li>
             </ul>
           </section>
 
           <section>
-            <h2>7. Hizmet Kullanılabilirliği</h2>
-            <p>
-              Hizmeti kesintisiz ve hatasız sunmak için çaba gösteririz ancak:
-            </p>
+            <h2>{t('terms.7.title')}</h2>
+            <p>{t('terms.7.text')}</p>
             <ul>
-              <li>Hizmet ara sıra bakım için kullanılamayabilir</li>
-              <li>Hizmeti önceden bildirmeksizin değiştirebiliriz</li>
-              <li>%100 çalışma süresi garantisi vermiyoruz</li>
-              <li>Üçüncü taraf servislere (Google Translate API) bağımlılık vardır</li>
+              <li>{t('terms.7.list.1')}</li>
+              <li>{t('terms.7.list.2')}</li>
+              <li>{t('terms.7.list.3')}</li>
+              <li>{t('terms.7.list.4')}</li>
             </ul>
           </section>
 
           <section>
-            <h2>8. Sorumluluk Reddi</h2>
-            <p>
-              Hizmet "olduğu gibi" ve "mevcut olduğu şekilde" sunulur. Vocabin:
-            </p>
+            <h2>{t('terms.8.title')}</h2>
+            <p>{t('terms.8.text')}</p>
             <ul>
-              <li>Çevirilerin %100 doğruluğunu garanti etmez</li>
-              <li>Hizmetin kesintisiz çalışacağını garanti etmez</li>
-              <li>Kullanıcı verilerinin kaybolmamasını garanti etmez (yedekleme yapmanız önerilir)</li>
-              <li>Üçüncü taraf içeriklerden sorumlu değildir</li>
+              <li>{t('terms.8.list.1')}</li>
+              <li>{t('terms.8.list.2')}</li>
+              <li>{t('terms.8.list.3')}</li>
+              <li>{t('terms.8.list.4')}</li>
             </ul>
           </section>
 
           <section>
-            <h2>9. Sorumluluk Sınırlaması</h2>
-            <p>
-              Yasaların izin verdiği ölçüde, Vocabin aşağıdakilerden sorumlu değildir:
-            </p>
+            <h2>{t('terms.9.title')}</h2>
+            <p>{t('terms.9.text')}</p>
             <ul>
-              <li>Doğrudan, dolaylı, arızi veya sonuç olarak ortaya çıkan zararlar</li>
-              <li>Veri kaybı veya kar kaybı</li>
-              <li>İş kesintisi veya bilgisayar arızası</li>
-              <li>Hizmetin kullanılamaması sonucu oluşan zararlar</li>
+              <li>{t('terms.9.list.1')}</li>
+              <li>{t('terms.9.list.2')}</li>
+              <li>{t('terms.9.list.3')}</li>
+              <li>{t('terms.9.list.4')}</li>
             </ul>
-            <p>
-              Toplam sorumluluğumuz, son 12 ayda ödediğiniz abonelik ücretiyle sınırlıdır.
-            </p>
+            <p>{t('terms.9.text2')}</p>
           </section>
 
           <section>
-            <h2>10. Hesap Askıya Alma ve Sonlandırma</h2>
-            <p>
-              Vocabin, aşağıdaki durumlarda hesabınızı askıya alma veya sonlandırma hakkını saklı tutar:
-            </p>
+            <h2>{t('terms.10.title')}</h2>
+            <p>{t('terms.10.text')}</p>
             <ul>
-              <li>Bu Şartları ihlal etmeniz</li>
-              <li>Hizmeti kötüye kullanmanız</li>
-              <li>Yasadışı faaliyetlerde bulunmanız</li>
-              <li>Ödeme yapmamanız</li>
-              <li>Uzun süre aktif olmamanız</li>
+              <li>{t('terms.10.list.1')}</li>
+              <li>{t('terms.10.list.2')}</li>
+              <li>{t('terms.10.list.3')}</li>
+              <li>{t('terms.10.list.4')}</li>
+              <li>{t('terms.10.list.5')}</li>
             </ul>
-            <p>
-              Hesabınızı istediğiniz zaman kapatabilirsiniz. Hesap kapatıldığında tüm verileriniz silinir.
-            </p>
+            <p>{t('terms.10.text2')}</p>
           </section>
 
           <section>
-            <h2>11. Değişiklikler</h2>
-            <p>
-              Bu Şartları zaman zaman güncelleyebiliriz. Önemli değişiklikler yapıldığında:
-            </p>
+            <h2>{t('terms.11.title')}</h2>
+            <p>{t('terms.11.text')}</p>
             <ul>
-              <li>Değişiklikler bu sayfada yayınlanır</li>
-              <li>E-posta ile bildirim gönderilir</li>
-              <li>"Son Güncelleme" tarihi güncellenir</li>
-              <li>Değişiklikler yayınlandıktan 30 gün sonra yürürlüğe girer</li>
+              <li>{t('terms.11.list.1')}</li>
+              <li>{t('terms.11.list.2')}</li>
+              <li>{t('terms.11.list.3')}</li>
+              <li>{t('terms.11.list.4')}</li>
             </ul>
-            <p>
-              Değişiklikler sonrası Hizmeti kullanmaya devam ederek, güncel Şartları kabul etmiş olursunuz.
-            </p>
+            <p>{t('terms.11.text2')}</p>
           </section>
 
           <section>
-            <h2>12. Uygulanacak Hukuk ve Yargı Yetkisi</h2>
-            <p>
-              Bu Şartlar Türkiye Cumhuriyeti yasalarına tabidir. Bu Şartlardan doğan uyuşmazlıklar
-              İstanbul (Merkez) mahkemeleri ve icra daireleri tarafından çözümlenecektir.
-            </p>
+            <h2>{t('terms.12.title')}</h2>
+            <p>{t('terms.12.text')}</p>
           </section>
 
           <section>
-            <h2>13. Genel Hükümler</h2>
-            <h3>13.1. Bütünlük</h3>
-            <p>
-              Bu Şartlar, sizinle Vocabin arasındaki anlaşmanın tamamını oluşturur ve önceki tüm
-              anlaşmaların yerini alır.
-            </p>
+            <h2>{t('terms.13.title')}</h2>
+            <h3>{t('terms.13.1.title')}</h3>
+            <p>{t('terms.13.1.text')}</p>
 
-            <h3>13.2. Feragat</h3>
-            <p>
-              Vocabin'in herhangi bir hakkını kullanmaması, o haktan feragat ettiği anlamına gelmez.
-            </p>
+            <h3>{t('terms.13.2.title')}</h3>
+            <p>{t('terms.13.2.text')}</p>
 
-            <h3>13.3. Bölünebilirlik</h3>
-            <p>
-              Bu Şartların herhangi bir hükmü geçersiz sayılırsa, diğer hükümler geçerliliğini korur.
-            </p>
+            <h3>{t('terms.13.3.title')}</h3>
+            <p>{t('terms.13.3.text')}</p>
 
-            <h3>13.4. Devir</h3>
-            <p>
-              Bu Şartlardan doğan haklarınızı başkasına devredemezsiniz. Vocabin, haklarını
-              istediği zaman devredebilir.
-            </p>
+            <h3>{t('terms.13.4.title')}</h3>
+            <p>{t('terms.13.4.text')}</p>
           </section>
 
           <section>
-            <h2>14. İletişim</h2>
-            <p>
-              Bu Şartlar hakkında sorularınız varsa bizimle iletişime geçebilirsiniz:
-            </p>
+            <h2>{t('terms.14.title')}</h2>
+            <p>{t('terms.14.text')}</p>
             <ul>
-              <li><strong>E-posta:</strong> support@vocabin.com</li>
-              <li><strong>Web:</strong> https://vocabin.com</li>
+              <li><strong>{t('terms.14.email')}</strong> support@vocabin.com</li>
+              <li><strong>{t('terms.14.web')}</strong> https://vocabin.com</li>
             </ul>
           </section>
 
           <section>
-            <h2>15. Onay</h2>
-            <p>
-              Hizmeti kullanarak, bu Hizmet Şartlarını okuduğunuzu, anladığınızı ve kabul ettiğinizi
-              onaylarsınız.
-            </p>
+            <h2>{t('terms.15.title')}</h2>
+            <p>{t('terms.15.text')}</p>
           </section>
         </div>
       </div>
