@@ -323,6 +323,15 @@ const translations: Record<Language, Record<string, string>> = {
     'privacy.11.web': 'Web:',
     'privacy.12.title': '12. GDPR Compliance',
     'privacy.12.text': 'As Vocabin, we fully comply with the General Data Protection Regulation (GDPR). Your personal data is processed in accordance with the conditions specified in GDPR. We fulfill our obligations as data controller.',
+
+    // Support Page
+    'support.title': 'Support',
+    'support.needHelp.title': 'Need Help?',
+    'support.needHelp.text': 'If you have any questions, issues, or feedback about Vocabin, we\'re here to help. Please don\'t hesitate to reach out to us.',
+    'support.contact.title': 'Contact Us',
+    'support.contact.text': 'For all support inquiries, please email us at:',
+    'support.response.title': 'Response Time',
+    'support.response.text': 'We typically respond to all inquiries within 24-48 hours during business days.',
   },
   tr: {
     // Navigation
@@ -635,6 +644,15 @@ const translations: Record<Language, Record<string, string>> = {
     'privacy.11.web': 'Web:',
     'privacy.12.title': '12. KVKK Uyumu',
     'privacy.12.text': 'Vocabin olarak 6698 sayılı Kişisel Verilerin Korunması Kanunu\'na ("KVKK") tam uyum sağlıyoruz. Kişisel verileriniz KVKK\'nın 4. ve 5. maddelerinde belirtilen şartlara uygun olarak işlenir. Veri sorumlusu olarak yükümlülüklerimizi yerine getiriyoruz.',
+
+    // Support Page
+    'support.title': 'Destek',
+    'support.needHelp.title': 'Yardıma mı İhtiyacınız Var?',
+    'support.needHelp.text': 'Vocabin hakkında herhangi bir sorunuz, sorununuz veya geri bildiriminiz varsa, size yardımcı olmak için buradayız. Lütfen bizimle iletişime geçmekten çekinmeyin.',
+    'support.contact.title': 'Bize Ulaşın',
+    'support.contact.text': 'Tüm destek talepleri için lütfen bize e-posta gönderin:',
+    'support.response.title': 'Yanıt Süresi',
+    'support.response.text': 'İş günlerinde tüm sorulara genellikle 24-48 saat içinde yanıt veriyoruz.',
   },
 };
 
