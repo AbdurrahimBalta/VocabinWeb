@@ -897,6 +897,104 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.7;
 }
 
+/* ==================== Mobile Apps Section ==================== */
+.mobile-apps {
+    padding: 100px 0;
+    background: var(--bg-gray);
+}
+
+.mobile-apps-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.mobile-app-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 32px;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mobile-app-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mobile-app-card:hover {
+    border-color: var(--primary-green);
+    box-shadow: var(--shadow-lg);
+}
+
+.qr-wrapper {
+    padding: 20px;
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    margin-bottom: 16px;
+    transition: var(--transition);
+}
+
+.mobile-app-card:hover .qr-wrapper {
+    border-color: var(--primary-green);
+}
+
+.qr-label {
+    font-size: 13px;
+    color: var(--text-gray);
+    margin-bottom: 24px;
+    display: block;
+}
+
+.store-badge-link {
+    display: block;
+    transition: var(--transition);
+}
+
+.store-badge-link:hover {
+    transform: scale(1.05);
+}
+
+.store-badge-img {
+    height: 56px;
+    width: auto;
+}
+
+@media (max-width: 600px) {
+    .mobile-apps-grid {
+        grid-template-columns: 1fr;
+        max-width: 340px;
+    }
+
+    .mobile-app-card {
+        padding: 32px 24px;
+    }
+
+    .store-badge-img {
+        height: 50px;
+    }
+
+    .qr-wrapper svg {
+        width: 180px !important;
+        height: 180px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-apps {
+        padding: 80px 0;
+    }
+}
+
 /* ==================== CTA Section ==================== */
 .cta {
     padding: 100px 0;

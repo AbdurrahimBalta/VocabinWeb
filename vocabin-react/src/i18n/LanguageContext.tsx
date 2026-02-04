@@ -324,6 +324,11 @@ const translations: Record<Language, Record<string, string>> = {
     'privacy.12.title': '12. GDPR Compliance',
     'privacy.12.text': 'As Vocabin, we fully comply with the General Data Protection Regulation (GDPR). Your personal data is processed in accordance with the conditions specified in GDPR. We fulfill our obligations as data controller.',
 
+    // Mobile Apps Section
+    'mobileApps.title': 'Download Mobile App',
+    'mobileApps.description': 'Take your vocabulary with you. Learn anywhere, anytime.',
+    'mobileApps.scanQR': 'Scan QR code',
+
     // Support Page
     'support.title': 'Support',
     'support.needHelp.title': 'Need Help?',
@@ -644,6 +649,11 @@ const translations: Record<Language, Record<string, string>> = {
     'privacy.11.web': 'Web:',
     'privacy.12.title': '12. KVKK Uyumu',
     'privacy.12.text': 'Vocabin olarak 6698 sayılı Kişisel Verilerin Korunması Kanunu\'na ("KVKK") tam uyum sağlıyoruz. Kişisel verileriniz KVKK\'nın 4. ve 5. maddelerinde belirtilen şartlara uygun olarak işlenir. Veri sorumlusu olarak yükümlülüklerimizi yerine getiriyoruz.',
+
+    // Mobile Apps Section
+    'mobileApps.title': 'Mobil Uygulamayı İndir',
+    'mobileApps.description': 'Kelime dağarcığını yanında taşı. Her yerde, her zaman öğren.',
+    'mobileApps.scanQR': 'QR kodu tara',
 
     // Support Page
     'support.title': 'Destek',
