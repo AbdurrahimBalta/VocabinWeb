@@ -32,6 +32,11 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.statWords': 'Words Saved',
     'hero.statCountries': 'Countries',
 
+    // Hero Mobile Promo
+    'hero.mobilePromo.title': 'Try Our Mobile App!',
+    'hero.mobilePromo.subtitle': 'Learn on the go with Vocabin',
+    'hero.mobilePromo.scanQR': 'Scan to download',
+
     // Floating Cards
     'hero.translation1': 'temporary, short-lived',
     'hero.translation2': 'lucky coincidence',
@@ -357,6 +362,11 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.statRating': 'Kullanıcı Puanı',
     'hero.statWords': 'Kaydedilen Kelime',
     'hero.statCountries': 'Ülkeden Kullanıcı',
+
+    // Hero Mobile Promo
+    'hero.mobilePromo.title': 'Mobil Uygulamamızı Deneyin!',
+    'hero.mobilePromo.subtitle': 'Vocabin ile her yerde öğrenin',
+    'hero.mobilePromo.scanQR': 'Tarayarak indirin',
 
     // Floating Cards
     'hero.translation1': 'geçici, kısa ömürlü',

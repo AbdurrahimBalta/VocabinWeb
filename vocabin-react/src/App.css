@@ -354,6 +354,144 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--border-color);
 }
 
+/* ==================== Hero Mobile Promo ==================== */
+.mobile-promo-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    padding: 40px 48px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    min-width: 420px;
+}
+
+.mobile-promo-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mobile-promo-header {
+    margin-bottom: 28px;
+}
+
+.mobile-promo-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.mobile-promo-subtitle {
+    font-size: 14px;
+    color: var(--text-gray);
+}
+
+.mobile-tabs {
+    display: flex;
+    gap: 8px;
+    background: var(--bg-light);
+    padding: 6px;
+    border-radius: var(--radius-md);
+    margin-bottom: 24px;
+}
+
+.mobile-tab {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border: none;
+    background: transparent;
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-gray);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.mobile-tab:hover {
+    color: var(--text-dark);
+}
+
+.mobile-tab.active {
+    background: white;
+    color: var(--primary-green);
+    box-shadow: var(--shadow-sm);
+}
+
+.mobile-tab svg {
+    flex-shrink: 0;
+}
+
+.mobile-promo-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.qr-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.mobile-promo-card .qr-wrapper {
+    padding: 16px;
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    margin-bottom: 0;
+}
+
+.mobile-promo-card .qr-label {
+    font-size: 13px;
+    color: var(--text-gray);
+    margin-bottom: 0;
+}
+
+.mobile-promo-card .store-badge-img {
+    height: 48px;
+}
+
+.hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .mobile-promo-card {
+        padding: 28px 24px;
+        min-width: unset;
+        width: 100%;
+    }
+
+    .mobile-promo-title {
+        font-size: 20px;
+    }
+
+    .mobile-tab {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .mobile-promo-card .qr-wrapper svg {
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    .mobile-promo-card .store-badge-img {
+        height: 42px;
+    }
+}
+
 /* ==================== Hero Visual ==================== */
 .hero-visual {
     position: relative;
